@@ -5742,6 +5742,11 @@ textarea {
 .jumbotron {
   text-align: center; }
 
+#logout {
+  cursor: default; }
+  #logout:hover {
+    background-color: transparent; }
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1; }
 
@@ -5777,6 +5782,11 @@ p {
   font-weight: bold; }
   #logo:hover {
     color: #fff; }
+
+#logout {
+  cursor: default; }
+  #logout:hover {
+    background-color: transparent; }
 
 /* footer */
 footer {

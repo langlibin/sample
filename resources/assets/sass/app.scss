@@ -20,6 +20,12 @@ textarea {
   text-align: center;
 }
 
+#logout {
+  cursor: default;
+  &:hover {
+    background-color: transparent;
+  }
+}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,6 +70,13 @@ p {
   font-weight: bold;
   &:hover {
     color: #fff;
+  }
+}
+
+#logout {
+  cursor: default;
+  &:hover {
+    background-color: transparent;
   }
 }
 
