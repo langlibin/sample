@@ -2,7 +2,7 @@
 
 $navbar-color: #3c3e42;
 
-
+/* universal */
 
 body {
   padding-top: 60px;
@@ -20,13 +20,11 @@ textarea {
   text-align: center;
 }
 
-#logout {
-  cursor: default;
-  &:hover {
-    background-color: transparent;
-  }
+.alert-status {
+  @extend .alert-info;
 }
 
+/* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -53,7 +51,7 @@ p {
   line-height: 1.7em;
 }
 
-
+/* header */
 
 .navbar-inverse {
   background-color: $navbar-color;
@@ -162,7 +160,55 @@ section.user_info {
   border-radius: 50%;
 }
 
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+    width: 33%;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #337ab7;
+    }
+  }
+  strong {
+    display: block;
+    font-size: 1.2em;
+    color: black;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
 /* forms */
+
+#follow_form button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px;
+}
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
@@ -206,12 +252,6 @@ input {
   float: right;
   position: relative;
   right: 0;
-}
-
-/* universal */
-
-.alert-status {
-  @extend .alert-info;
 }
 
 /* statuses */

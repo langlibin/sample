@@ -5730,6 +5730,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+/* universal */
 body {
   padding-top: 60px; }
 
@@ -5742,11 +5743,7 @@ textarea {
 .jumbotron {
   text-align: center; }
 
-#logout {
-  cursor: default; }
-  #logout:hover {
-    background-color: transparent; }
-
+/* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1; }
 
@@ -5768,6 +5765,7 @@ p {
   font-size: 1.1em;
   line-height: 1.7em; }
 
+/* header */
 .navbar-inverse {
   background-color: #3c3e42; }
 
@@ -5844,7 +5842,45 @@ section.user_info {
   max-width: 50px;
   border-radius: 50%; }
 
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0; }
+  .stats a {
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+    width: 33%;
+    border-left: 1px solid #eeeeee;
+    color: gray; }
+    .stats a:first-child {
+      padding-left: 0;
+      border: 0; }
+    .stats a:hover {
+      text-decoration: none;
+      color: #337ab7; }
+  .stats strong {
+    display: block;
+    font-size: 1.2em;
+    color: black; }
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px; }
+  .user_avatars .gravatar {
+    margin: 1px 1px; }
+  .user_avatars a {
+    padding: 0; }
+
+.users.follow {
+  padding: 0; }
+
 /* forms */
+#follow_form button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px; }
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -5879,7 +5915,6 @@ input {
   position: relative;
   right: 0; }
 
-/* universal */
 /* statuses */
 .statuses {
   list-style: none;
