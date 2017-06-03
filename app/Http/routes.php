@@ -1,24 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/', 'StaticPagesController@home');
-// Route::get('/help', 'StaticPagesController@help');
-// Route::get('/about', 'StaticPagesController@about');
-
 get('/', 'StaticPagesController@home')->name('home');
 get('/help', 'StaticPagesController@help')->name('help');
 get('/about', 'StaticPagesController@about')->name('about');
@@ -32,7 +13,9 @@ delete('logout', 'SessionsController@destroy')->name('logout');
 
 get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
 
-Route::get('password/email', 'Auth\PasswordController@getEmail')->name('password.reset');
-Route::post('password/email', 'Auth\PasswordController@postEmail')->name('password.reset');
-Route::get('password/reset/{token}', 'Auth\PasswordController@getReset')->name('password.edit');
-Route::post('password/reset', 'Auth\PasswordController@postReset')->name('password.update');
+get('password/email', 'Auth\PasswordController@getEmail')->name('password.reset');
+post('password/email', 'Auth\PasswordController@postEmail')->name('password.reset');
+get('password/reset/{token}', 'Auth\PasswordController@getReset')->name('password.edit');
+post('password/reset', 'Auth\PasswordController@postReset')->name('password.update');
+
+resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
